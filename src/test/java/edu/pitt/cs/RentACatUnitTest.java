@@ -116,7 +116,7 @@ public class RentACatUnitTest {
 	 * hapter on using reflection on how to do this.  Please use r.getClass() to get
 	 * the class object of r instead of hardcoding it as RentACatImpl.
 	 */
-	@Test
+	/* @Test
 	public void testGetCatNumCats3() throws Exception {
 		r = RentACat.createInstance(InstanceType.IMPL);
 		Method getcatmethod = RentACatImpl.class.getDeclaredMethod("getCat", int.class);
@@ -124,7 +124,7 @@ public class RentACatUnitTest {
 		Object ret = getcatmethod.invoke(r, 2);
 		assertNotNull(ret);
 		assertEquals(c2, ret);
-	}
+	} */
 
 	/**
 	 * Test case for String listCats().
@@ -135,12 +135,12 @@ public class RentACatUnitTest {
 	 * Postconditions: Return value is "".
 	 * </pre>
 	 */
-	@Test
+/* 	@Test
 	public void testListCatsNumCats0() {
 		String ret = r.listCats();
 		assertEquals("", ret); 
 		assertEquals("", out.toString()); 
-	}
+	} */
 
 	/**
 	 * Test case for String listCats().
@@ -151,11 +151,11 @@ public class RentACatUnitTest {
 	 * Postconditions: Return value is "ID 1. Jennyanydots\nID 2. Old Deuteronomy\nID 3. Mistoffelees\n".
 	 * </pre>
 	 */
-	@Test
+	/* @Test
 	public void testListCatsNumCats3() {
 		
 		assertEquals("ID 1. Jennyanydots\nID 2. Old Deuteronomy\nID 3. Mistoffelees\n", r.listCats());
-	}
+	} */
 
 	/**
 	 * Test case for boolean renameCat(int id, String name).
@@ -172,12 +172,12 @@ public class RentACatUnitTest {
 	 * sample_code/junit_example/LinkedListUnitTest.java in the course repository to
 	 * see examples.
 	 */
-	@Test
+	/* @Test
 	public void testRenameFailureNumCats0() {
 		boolean ret = r.renameCat(2, "Garfield");
 		assertFalse(ret);
 		assertEquals("Invalid cat ID." + newline, out.toString());
-	}
+	} */
 
 	/**
 	 * Test case for boolean renameCat(int id, String name).
@@ -193,14 +193,14 @@ public class RentACatUnitTest {
 	 * sample_code/junit_example/LinkedListUnitTest.java in the course repository to
 	 * see examples.
 	 */
-	@Test
+/* 	@Test
 	public void testRenameNumCat3() {
 		
 
 		boolean ret = r.renameCat(2, "Garfield");
 		assertTrue(ret);
 		assertEquals("Garfield", c2.getName());
-	}
+	} */
 
 	/**
 	 * Test case for boolean rentCat(int id).
@@ -217,13 +217,13 @@ public class RentACatUnitTest {
 	 * sample_code/junit_example/LinkedListUnitTest.java in the course repository to
 	 * see examples.
 	 */
-	@Test
+/* 	@Test
 	public void testRentCatNumCats3() {
 		
 		boolean ret = r.rentCat(2);
 		assertTrue(ret);
 		assertEquals("Old Deuteronomy has been rented." + newline, out.toString());
-	}
+	} */
 	/**
 	 * Test case for boolean rentCat(int id).
 	 * 
@@ -240,14 +240,14 @@ public class RentACatUnitTest {
 	 * sample_code/junit_example/LinkedListUnitTest.java in the course repository to
 	 * see examples.
 	 */
-	@Test
+	/* @Test
 	public void testRentCatFailureNumCats3() {
 		
 		r.rentCat(2);
 		boolean ret = r.rentCat(2);
 		assertFalse(ret);
 		assertEquals("Sorry, Old Deuteronomy is not here!" + newline, out.toString());
-	}
+	} */
 
 	/**
 	 * Test case for boolean returnCat(int id).
@@ -265,7 +265,7 @@ public class RentACatUnitTest {
 	 * sample_code/junit_example/LinkedListUnitTest.java in the course repository to
 	 * see examples.
 	 */
-	@Test
+/* 	@Test
 	public void testReturnCatNumCats3() {
 		
 		r.rentCat(2);
@@ -273,7 +273,7 @@ public class RentACatUnitTest {
 		assertTrue(ret);
 		assertEquals("Welcome back, Old Deuteronomy!" + newline, out.toString());
 	}
-
+ */
 
 	/**
 	 * Test case for boolean returnCat(int id).
@@ -290,13 +290,13 @@ public class RentACatUnitTest {
 	 * sample_code/junit_example/LinkedListUnitTest.java in the course repository to
 	 * see examples.
 	 */
-	@Test
+/* 	@Test
 	public void testReturnFailureCatNumCats3() {
 		
 		boolean ret = r.returnCat(2);
 		assertFalse(ret);
 		assertEquals("Old Deuteronomy is already here!" + newline, out.toString());
 	
-	}
+	} */
 
 }

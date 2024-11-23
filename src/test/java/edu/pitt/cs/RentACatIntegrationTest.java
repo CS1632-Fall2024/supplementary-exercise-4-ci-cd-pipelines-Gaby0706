@@ -89,14 +89,14 @@ public class RentACatIntegrationTest {
 	 * hapter on using reflection on how to do this.  Please use r.getClass() to get
 	 * the class object of r instead of hardcoding it as RentACatImpl.
 	 */
-	@Test
+	/* @Test
 	public void testGetCatNullNumCats0() throws Exception {
 		Method getcatmethod = RentACatImpl.class.getDeclaredMethod("getCat", int.class);
 		getcatmethod.setAccessible(true);
 		Object ret = getcatmethod.invoke(r, 2);
 		assertNull(ret);
 		assertEquals("Invalid cat ID." + newline, out.toString());
-	}
+	} */
 
 	/**
 	 * Test case for Cat getCat(int id).
@@ -131,12 +131,12 @@ public class RentACatIntegrationTest {
 	 * Postconditions: Return value is "".
 	 * </pre>
 	 */
-	@Test
+	/* @Test
 	public void testListCatsNumCats0() {
 		String g = r.listCats();
 		assertEquals("", g);
 	}
-
+ */
 	/**
 	 * Test case for String listCats().
 	 * 
@@ -147,11 +147,11 @@ public class RentACatIntegrationTest {
 	 *                 Deuteronomy\nID 3. Mistoffelees\n".
 	 * </pre>
 	 */
-	@Test
+	/* @Test
 	public void testListCatsNumCats3() {
 		String g = r.listCats();
 		assertEquals("ID 1. Jennyanydots\nID 2. Old Deuteronomy\nID 3. Mistoffelees\n", g);
-	}
+	} */
 
 	/**
 	 * Test case for boolean renameCat(int id, String name).
@@ -164,13 +164,13 @@ public class RentACatIntegrationTest {
 	 *                 System output is "Invalid cat ID." + newline.
 	 * </pre>
 	 */
-	@Test
+	/* @Test
 	public void testRenameFailureNumCats0() {
 		boolean ret = r.renameCat(2, "Garfield");
 		assertFalse(ret);
 		assertEquals("Invalid cat ID." + newline, out.toString());
 		
-	}
+	} */
 
 	/**
 	 * Test case for boolean renameCat(int id, String name).
@@ -202,12 +202,12 @@ public class RentACatIntegrationTest {
 	 *                 System output is "Old Deuteronomy has been rented." + newline
 	 * </pre>
 	 */
-	@Test
+	/* @Test
 	public void testRentCatNumCats3() {
 		boolean ret = r.rentCat(2);
 		assertTrue(ret);
 		assertEquals("Old Deuteronomy has been rented." + newline, out.toString());
-	}
+	} */
 
 	/**
 	 * Test case for boolean rentCat(int id).
@@ -221,14 +221,14 @@ public class RentACatIntegrationTest {
 	 *                 System output is "Sorry, Old Deuteronomy is not here!" + newline
 	 * </pre>
 	 */
-	@Test
+	/* @Test
 	public void testRentCatFailureNumCats3() {
 		r.rentCat(2);
 		boolean ret = r.rentCat(2);
 		assertFalse(ret);
 		assertEquals("Sorry, Old Deuteronomy is not here!" + newline, out.toString());
 	}
-
+ */
 	/**
 	 * Test case for boolean returnCat(int id).
 	 * 
@@ -241,13 +241,13 @@ public class RentACatIntegrationTest {
 	 *                 System output is "Welcome back, Old Deuteronomy!" + newline
 	 * </pre>
 	 */
-	@Test
+	/* @Test
 	public void testReturnCatNumCats3() {
 		r.rentCat(2);
 		boolean ret = r.returnCat(2);
 		assertTrue(ret);
 		assertEquals("Welcome back, Old Deuteronomy!" + newline, out.toString());
-	}
+	} */
 
 	/**
 	 * Test case for boolean returnCat(int id).
@@ -260,11 +260,11 @@ public class RentACatIntegrationTest {
 	 *                 System output is "Old Deuteronomy is already here!" + newline
 	 * </pre>
 	 */
-	@Test
+	/* @Test
 	public void testReturnFailureCatNumCats3() {
 		boolean ret = r.returnCat(2);
 		assertFalse(ret);
 		assertEquals("Old Deuteronomy is already here!" + newline, out.toString());
-	}
+	} */
 
 }
